@@ -18,24 +18,24 @@
 </head>
 <body>
 <div class="container">
-<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="LoG()">LogOut</button>
 	<center>
 		<h1 class="header">	
-		 Φοίνιξ(Rooms)
-			<sup>
-				<img src="m2.png">
-			</sup>
+		 Join A Room
+		
 		</h1>
 		<h3>Welcome</h3><h3 id="unV"></h3>
 		<h3 class="color_white"></h3>
 		<div class="form-group input_div_room_page">
-			<label>Add Φοίνιξ:</label>
+			<label>Add ChatRoom:</label>
 			<br>
-<input class="form-control" id="Nebula" placeholder="Enter Φοίνικες Name" type="text">
+<input class="form-control" id="Nebula" placeholder="Enter ChatRoom Name" type="text">
 		</div>
-		<button class="btn btn-info">Add Φοίνιξ</button>
-		<h3 class="color_white">Popular Φοίνικες</h3>
-	<div id="TR"></div>
+		<button class="btn btn-primary" onclick="AR()">Add/Join ChatRoom</button>
+		<h3 class="color_white">Popular ChatRooms</h3>
+	<div id="TR">
+		<br>
+	</div>
 	</center>
 </div>
 <script src="kwitter_room.js"></script>
