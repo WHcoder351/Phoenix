@@ -43,3 +43,9 @@ function Redirect(name) {
       localStorage.setItem("RoomName", name)
       window.location = "kwitter_page.html"
 }
+function LoG(){
+      localStorage.removeItem("USER!!");
+      localStorage.removeItem("RoomName");
+      localStorage.removeItem("Message:");
+      window.location = "index.html";
+}
