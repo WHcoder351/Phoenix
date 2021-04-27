@@ -10,42 +10,42 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 //ADD YOUR FIREBASE LINKS HERE
-UNVar = localStorage.getItem("Username!");
-document.getElementById("unV").innerHTML = "Welcome " + UNVar + "";
+Un = localStorage.getItem("USER!!");
+document.getElementById("PR").innerHTML = "Welcome" + Un + "!!";
 
 function getData() {
       firebase.database().ref("/").on('value', function (snapshot) {
-            document.getElementById("Nebula").innerHTML = "";
+            document.getElementById("output").innerHTML = "";
             snapshot.forEach(function (childSnapshot) {
                   childKey = childSnapshot.key;
                   Room_names = childKey;
-
                   //Start code
                   console.log("Room Name=" + Room_names);
-                  row = "<div  class = 'room_name' id = " + Room_names + " onclick = 'Redirect(this.id)' >#" + Room_names + " </div><hr>";
+                  row = "<div  class = 'room_name' id = " + Room_names + " onclick = 'REDnr(this.id)' >#" + Room_names + " </div><hr>";
                   document.getElementById("TR").innerHTML += row;
                   //End code
             });
       });
 }
 getData();
-function AR(name) {
-      console.log(name);
-      Room = document.getElementById("Nebula").value;
+
+function cliCk() {
+      Room = document.getElementById("rooms").value;
       localStorage.setItem("RoomName", Room);
       firebase.database().ref("/").child(Room).update({
             purpose: "add Room"
       });
       window.location = "kwitter_page.html"
 }
-function Redirect(name) {
+
+function REDnr(name) {
       console.log(name);
       localStorage.setItem("RoomName", name)
       window.location = "kwitter_page.html"
 }
-function LoG(){
+
+function LG() {
       localStorage.removeItem("USER!!");
       localStorage.removeItem("RoomName");
-      localStorage.removeItem("Message:");
       window.location = "index.html";
 }
