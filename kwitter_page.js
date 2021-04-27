@@ -11,7 +11,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 //YOUR FIREBASE LINKS
 Rn = localStorage.getItem("RoomName");
-un = localStorage.getItem("USER!!");
+un = localStorage.getItem("Username!!");
 
 function getData() {
       firebase.database().ref("/" + room_name).on('value', function (snapshot) {
@@ -25,7 +25,7 @@ function getData() {
                         //Start code
 console.log(firebase_message_id);
 console.log(message_data);
-name= message_data['name'];
+ name= message_data['name'];
 message= message_data['message'];
 like= message_data['like'];
 nameTag = "<h4>" + name + "<img src = 'tick.png' class = 'user_tick'></h4>";
@@ -33,7 +33,7 @@ Messa = "<h4 class = 'message_h4'>" + message + "</h4>";
 button_ = "<button class = 'btn btn-danger' id = " + firebase_message_id + " value=" +like + " onclick = 'updateLike(this.id)'>";
 Swtu = "<span class = 'glyphicon glyphicon-thumbs-up'> Likes: " + like +"</span></button></hr>" ;
 row = nameTag + Messa + button_ + Swtu;
-document.getElementById("output").innerHTML += row;
+
                         //End code
                   }
             });
@@ -58,9 +58,10 @@ function SendMSG() {
             like: 0
       });
       document.getElementById("MSG").value = "";
+      document.getElementById("output").innerHTML += row;
 }
-function LGS(){
-      localStorage.removeItem("USER!!");
+function L0G(){
+      localStorage.removeItem("Username!");
       localStorage.removeItem("RoomName");
       window.location = "index.html";
 }

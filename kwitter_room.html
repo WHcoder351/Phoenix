@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Phoenix Room</title>
+	<title>PhoenixChat Rooms</title>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
@@ -18,22 +18,24 @@
 </head>
 <body>
 <div class="container">
-<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="LG()">Logout</button>
+<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="LoG()">LogOut</button>
 	<center>
 		<h1 class="header">	
-	Kwitter
-			<sup>
-				<img src="m2.png">
-			</sup>
+		 Join A Room
+		
 		</h1>
-		<h3 class="color_white" id="PR"></h3>
+		<h3 class="color_white" id="unV"></h3>
+		
 		<div class="form-group input_div_room_page">
-			<label>#Add Room:</label>
-<input class="form-control" id="rooms" placeholder="Enter Room Name" type="text">
+			<label>Add ChatRoom:</label>
+			<br>
+<input class="form-control" id="Nebula" placeholder="Enter ChatRoom Name" type="text">
 		</div>
-		<button class="btn btn-success" onclick="cliCk()">Add ChatRoom</button>
-		<h3 class="color_white">Recommended/Popular ChatRooms </h3>
-	<div id="TR"></div>
+		<button class="btn btn-primary" onclick="AR()">Add/Join ChatRoom</button>
+		<h3 class="color_white">Popular ChatRooms</h3>
+	<div id="TR">
+		<br>
+	</div>
 	</center>
 </div>
 <script src="kwitter_room.js"></script>

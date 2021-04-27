@@ -2,12 +2,12 @@ html, body
 {
   height: 100%;
   margin: 0;
+  overflow:visible;
 }
 
 body
 {
-background-image: linear-gradient(to right top, #ff8800, #ff0000);
-overflow: hidden;
+background-image: linear-gradient(to right top, #ff0000, #ff7300);
 }
 
 .header
@@ -21,7 +21,7 @@ overflow: hidden;
 
 .login_div
 {
-	background: rgba(255,255,255,0.8);float: none;border-radius: 15px;
+	background: rgba(255, 123, 0, 0.8);float: none;border-radius: 15px;
 }
 
 .logo
@@ -44,7 +44,6 @@ overflow: hidden;
 #logout
 {
 	font-size: 20px; float: right;
-	margin-top: 10px;
 }
 
 
@@ -93,4 +92,7 @@ overflow: hidden;
 .message_h4
 {
 	padding-left:5px;color:grey;
+}
+#TR{
+	background-color: rgb(0, 153, 255);
 }

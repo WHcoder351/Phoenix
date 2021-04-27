@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kwitter Message page</title>
+	<title>PhoenixChat Page</title>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
@@ -18,23 +18,24 @@
 <body>
 
 <div class="container">
-	<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="LGS()">Logout</button>
+	<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="L0G()">LogOut</button>
 	<center>
 		<h1 class="header">	
-			Kwitter	
+			PhoenixChat
 			<sup>
 				<img src="m2.png">
 			</sup>
 		</h1>
 		<div id = "output" style="text-align: left;margin-bottom: 70px;"> </div>
+		<div style="text-align: left;margin-bottom: 70px;"> </div>
 	</center>
 </div>
 
 <center>
 	<div class="input_div_message_page">
 		<label>Send:</label>
-		<input class="form-control" placeholder="Type message here" id="MSG" type="text">
-		<button class="btn btn-success" onclick="SendMSG()">Send</button>
+		<input class="form-control" placeholder="Type message here" id="MSG">
+		<button class="btn btn-success" onclick="SendMSG() ">Send</button>
 	</div>
 </center>
 
