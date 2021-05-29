@@ -10,12 +10,13 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 //YOUR FIREBASE LINKS
-Rn = localStorage.getItem("RoomName");
+Roomn = localStorage.getItem("RoomName");
 un = localStorage.getItem("Username!!");
 
 function getData() {
       firebase.database().ref("/" + room_name).on('value', function (snapshot) {
-            document.getElementById("output").innerHTML = "";
+            document.getElementById("MSG").innerHTML = "";
+            document.getElementById("output").value = ""
             snapshot.forEach(function (childSnapshot) {
                   childKey = childSnapshot.key;
                   childData = childSnapshot.val();
@@ -46,13 +47,13 @@ button_Id = message_id;
 likes = document.getElementById(button_Id).value;
 uplike = Number(likes) + 1;
 console.log(uplike);
-firebase.database().ref(Rn).child(message_id).update({
+firebase.database().ref(Roomn).child(message_id).update({
    likes:uplike   
 });
 }
 function SendMSG() {
       msg = document.getElementById("MSG").value;
-      firebase.database().ref(Rn).push({
+      firebase.database().ref(Roomn).push({
             name: un,
             message: msg,
             like: 0
